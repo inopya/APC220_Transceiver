@@ -35,22 +35,22 @@ https://wiki.dfrobot.com/APC220_Radio_Data_Module_SKU_TEL0005_
 
 Para grabar informacion se ha de enviar una linea similar, modificando el sketch de configuracion
 #### WR 434000 3 9 3 0
-Esta configuracion seria: Frecuencia de emision 434MHz, velocidad RF 9600bps, 
-maxima potencia, Puerto serie 9600bps y sin control de paridad.
+Esta configuracion sería: Frecuencia de emisión 434MHz, velocidad RF 9600bps, 
+máxima potencia, Puerto serie 9600bps y sin control de paridad.
 
 
 
 Consejos, que no obligaciones.
 1. Grabar el programa en arduino sin tener el modulo conectado.
 2. Desconectar Arduino del USB de programacion y/o de cualquier otra fuente de alimentacion
-3. Conectar el modulo como se indica en la fotografia (es la manera mas comoda)
+3. Conectar el modulo como se indica en la fotografía (es la manera mas cómoda)
    o bien mediante cables dupont.
-4. Volver a conectar Arduino al ordenador apra que se produzca la grabacion de la configuracion o para leer la que contiene   
+4. Volver a conectar Arduino al ordenador apra que se produzca la grabación de la configuración o para leer la que contiene   
    
 #### Guia de conexion del APC220 directamente sobre Arduino
 ![](./imagenes/conexionApc220.jpg)
 
-en la fotografia y marcados en rojo esta la distribucion fisica de pines del APC220
+En la fotografía y marcados en rojo esta la distribución física de pines del APC220
 Haremos coincidir el pin GND del modulo con el propio de la tarjeta Arduino UNO
 y el resto coindiriran con pines digitales tal como se indica.
 
@@ -63,10 +63,10 @@ y el resto coindiriran con pines digitales tal como se indica.
 		 9		--->	AUX
 		 8		--->	SET
 
-Notad que al definir las funciones de los pines en el esketch de arduino al pin 11 ---> se le asigna la funcion TXD
-y al pin 10 ---> la funcion RXD, dado que dichos pines han de estar intercambiados entre el puerto serie de Arduino y el del módulo
+Notad que al definir las funciones de los pines en el esketch de arduino al (pin 11) se le asigna la funcion TXD
+y al (pin 10) la funcion RXD, dado que dichos pines han de estar intercambiados entre el puerto serie de Arduino y el del módulo
 
-Segun el datasheet del fabricante el modulo consume como maximo unos 35mA (y eso seria emitiendo)
+Segun el [_datasheet_](./APC220_Datasheet.pdf) del fabricante el modulo consume como maximo unos 35mA (y eso seria emitiendo)
 Puesto que vamos a trabajar con el sin emitir nada, solo configurandolo, 
 podemos asumir sin temor a equivocarnos que un pin de arduino que puede entregar hasta 40mA
 será suficiente para limentarlo.
