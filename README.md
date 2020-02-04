@@ -12,7 +12,7 @@ Cuando se lee la configuracion del modulo se obtiene un linea similar a esta:
 ####   PARAM  415370 2 9 3 0 
 	AAAAAA, es la frecuencia de trabajo del modulo expresada en KHz 
 	Puede oscilar entre 418MHz y 455MHz
-	- en el ejemplo 415.37 
+	- en el ejemplo 415.37MHz 
 
 	B, es la velocidad de transmision de radio frecuencia puede tomar los siguientes valores
 	1 (2400bps), 2 (4800bps), 3 (9600bps), 4 (19200bps)
@@ -29,8 +29,8 @@ Cuando se lee la configuracion del modulo se obtiene un linea similar a esta:
 	0 (sin control de paridad), 1 (paridad par), 2 (paridad impar)
 	- en el ejemplo sin control de paridad
 	
-	para mas detalles consultar el datasheet que hay en este repositorio o directamente en la pagina del fabricante
-	https://wiki.dfrobot.com/APC220_Radio_Data_Module_SKU_TEL0005_
+para mas detalles consultar el datasheet que hay en este repositorio o directamente en la pagina del fabricante
+https://wiki.dfrobot.com/APC220_Radio_Data_Module_SKU_TEL0005_
 
 
 Para grabar informacion se ha de enviar una linea similar, modificando el sketch de configuracion
