@@ -14,7 +14,7 @@ Consejos, que no obligaciones.
 4. Volver a conectar Arduino al ordenador apra que se produzca la grabacion de la configuracion o para leer la que contiene   
    
 #### Guia de conexion del APC220 directamente sobre Arduino
-![](./imagenes/pics/conexionApc220.jpg)
+![](./imagenes/conexionApc220.jpg)
 
 en la fotografia y marcados en rojo esta la distribucion fisica de pines del APC220
 Haremos coincidir el pin GND del modulo con el propio de la tarjeta Arduino UNO
