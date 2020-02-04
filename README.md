@@ -6,6 +6,35 @@ que la grabacion y lectura de configuracion en el modulo sea
 algo mas interactiva, por ahora debemos modificar el programa 
 de arduino para despues conectar el modulo y que se cargen los valores
 
+Cuando se lee la configuracion del modulo se obtiene un linea similar a esta
+
+####PARAM AAAAAA B C D E
+####      415370 2 9 3 0 
+	AAAAAA, es la frecuencia de trabajo del modulo expresada en KHz 
+	Puede oscilar entre 418MHz y 455MHz
+	***en el ejemplo 415.37***
+
+	B, es la velocidad de transmision de radio frecuencia puede tomar los siguientes valores
+	1 (2400bps), 2 (4800bps), 3 (9600bps), 4 (19200bps)
+	***en el ejemplo 4800bps***
+	
+	C, es la potencia de emision, puede tomar valores entre 0 y 9, siendo 9 la mayor potencia
+	en el ejemplo 9
+	
+	D, velodidad de transferencia entre el modulo y arduino o PC 	, toma valores entre 0 y 6
+	0 (1200bps), 1 (2400bps), 2 (4800bps),3 (9600bps), 4 (19200bps), 5 (38400bps), 6 (57600bps)
+	***en el ejemplo 9600bps***
+	
+	E, es el control de paridad de la informacion emitida por RF
+	0 (sin control de paridad), 1 (paridad par), 2 (paridad impar)
+
+
+Para grabar informacion se ha de enviar una linea similar...
+####WR 434000 3 9 3 0
+Esta configuracion seria: Frecuencia de emision 434MHz, velocidad RF 9600, 
+maxima potencia, Puerto serie 9600 y sin control de paridad
+
+
 Consejos, que no obligaciones.
 1. Grabar el programa en arduino sin tener el modulo conectado.
 2. Desconectar Arduino del USB de programacion y/o de cualquier otra fuente de alimentacion
@@ -20,14 +49,14 @@ en la fotografia y marcados en rojo esta la distribucion fisica de pines del APC
 Haremos coincidir el pin GND del modulo con el propio de la tarjeta Arduino UNO
 y el resto coindiriran con pines digitales tal como se indica.
 
-		####ARDUINO     APC220
-		GND         GND
-		13	--->	VCC
-		12	--->	EN
-		11	--->	RXD
-		10	--->	TXD
-		 9	--->	AUX
-		 8	--->	SET
+	   ARDUINO     	   APC220
+		GND         	GND
+		13		--->	VCC
+		12		--->	EN
+		11		--->	RXD
+		10		--->	TXD
+		 9		--->	AUX
+		 8		--->	SET
 
 Notad que al definir las funciones de los pines en el esketch de arduino al pin 11 ---> se le asigna la funcion TXD
 y al pin 10 ---> la funcion RXD, dado que dichos pines han de estar intercambiados entre el puerto serie de Arduino y el del módulo
