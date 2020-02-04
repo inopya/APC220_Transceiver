@@ -1,7 +1,7 @@
 # APC220_Transceiver
 ***Utilidad para configurar el APC220 desde Arduino / linux***
 
-Recordad que hasta una proxima version en al que trataré de hacer 
+Recordad que hasta una proxima version en la que trataré de hacer 
 que la grabacion y lectura de configuracion en el modulo sea 
 algo mas interactiva, por ahora debemos modificar el programa 
 de arduino para despues conectar el modulo y que se cargen los valores
@@ -28,12 +28,16 @@ Cuando se lee la configuracion del modulo se obtiene un linea similar a esta
 	E, es el control de paridad de la informacion emitida por RF
 	0 (sin control de paridad), 1 (paridad par), 2 (paridad impar)
 	*en el ejemplo sin control de paridad*
+	
+	para mas detalles consultar el datasheet que hay en este repositorio o directamente en la pagina del fabricante
+	https://wiki.dfrobot.com/APC220_Radio_Data_Module_SKU_TEL0005_
 
 
-Para grabar informacion se ha de enviar una linea similar...
+Para grabar informacion se ha de enviar una linea similar, modificando el sketch de configuracion
 #### WR 434000 3 9 3 0
 Esta configuracion seria: Frecuencia de emision 434MHz, velocidad RF 9600bps, 
 maxima potencia, Puerto serie 9600bps y sin control de paridad.
+
 
 
 Consejos, que no obligaciones.
