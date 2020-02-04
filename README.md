@@ -8,8 +8,8 @@ de arduino para despues conectar el modulo y que se cargen los valores
 
 Cuando se lee la configuracion del modulo se obtiene un linea similar a esta
 
-####PARAM AAAAAA B C D E
-####      415370 2 9 3 0 
+####   PARAM  AAAAAA B C D E
+####   PARAM  415370 2 9 3 0 
 	AAAAAA, es la frecuencia de trabajo del modulo expresada en KHz 
 	Puede oscilar entre 418MHz y 455MHz
 	***en el ejemplo 415.37***
@@ -23,16 +23,17 @@ Cuando se lee la configuracion del modulo se obtiene un linea similar a esta
 	
 	D, velodidad de transferencia entre el modulo y arduino o PC 	, toma valores entre 0 y 6
 	0 (1200bps), 1 (2400bps), 2 (4800bps),3 (9600bps), 4 (19200bps), 5 (38400bps), 6 (57600bps)
-	***en el ejemplo 9600bps***
+	*en el ejemplo 9600bps*
 	
 	E, es el control de paridad de la informacion emitida por RF
 	0 (sin control de paridad), 1 (paridad par), 2 (paridad impar)
+	*en el ejemplo sin control de paridad*
 
 
 Para grabar informacion se ha de enviar una linea similar...
-####WR 434000 3 9 3 0
-Esta configuracion seria: Frecuencia de emision 434MHz, velocidad RF 9600, 
-maxima potencia, Puerto serie 9600 y sin control de paridad
+#### WR 434000 3 9 3 0
+Esta configuracion seria: Frecuencia de emision 434MHz, velocidad RF 9600bps, 
+maxima potencia, Puerto serie 9600bps y sin control de paridad.
 
 
 Consejos, que no obligaciones.
