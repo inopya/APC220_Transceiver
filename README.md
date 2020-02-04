@@ -29,7 +29,7 @@ Cuando se lee la configuracion del modulo se obtiene un linea similar a esta:
 	0 (sin control de paridad), 1 (paridad par), 2 (paridad impar)
 	- en el ejemplo sin control de paridad
 	
-para mas detalles consultar el datasheet que hay en este repositorio o directamente en la pagina del fabricante
+para mas detalles consultar el [_datasheet_](./APC220_Datasheet.pdf) que hay en este repositorio o directamente en la pagina del fabricante
 https://wiki.dfrobot.com/APC220_Radio_Data_Module_SKU_TEL0005_
 
 
